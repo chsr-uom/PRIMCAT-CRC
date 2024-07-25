@@ -1,4 +1,4 @@
-<img src="PRIMCAT-logo-small.jpg" align="right"/> <br>
+<img src="PRIMCAT-logo-small.png" align="right"/> <br>
 This repository contains the R code associated with our manuscript https://doi.org/10.1016/j.jval.2024.06.006 and is part of the <a href="https://mdhs.unimelb.edu.au/centre-for-cancer-research/flagships/primcat-predicting-the-population-health-economic-impact-of-current-and-new-cancer-treatments" target="_blank">PRIMCAT research programme.</a>
 
 ### Predicting the Population Health Economic Impact of Current and New Cancer Treatments for Colorectal Cancer: A Data-Driven Whole Disease Simulation Model for Predicting the Number of Patients with Colorectal Cancer by Stage and Treatment Line in Australia.
