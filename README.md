@@ -1,4 +1,4 @@
-<img src="PRIMCAT-logo-small.png" align="right"/> <br>
+<img src="PRIMCAT-logo-small.jpg" align="right"/> <br>
 This repository contains the R code associated with our manuscript https://doi.org/10.1016/j.jval.2024.06.006 and is part of the <a href="https://mdhs.unimelb.edu.au/centre-for-cancer-research/flagships/primcat-predicting-the-population-health-economic-impact-of-current-and-new-cancer-treatments" target="_blank">PRIMCAT research programme.</a>
 
 ### Predicting the Population Health Economic Impact of Current and New Cancer Treatments for Colorectal Cancer: A Data-Driven Whole Disease Simulation Model for Predicting the Number of Patients with Colorectal Cancer by Stage and Treatment Line in Australia.
@@ -35,8 +35,23 @@ uncertainty for policymakers in decisions to publicly reimburse new treatments.
 │  └─ 4_scenario_pembro.R              # Scenario analysis for Pembrolizumab introduction
 │
 ├─ PRIMCAT-logo-small.jpg
+├─ primcat_collab.png
 ├─ LICENCE
 └─ README.md
 ```
 
 ------------------------------------------------------------------------
+
+#### 🔧 What is the required set-up?
+
+------------------------------------------------------------------------
+
+#### 💪 What are the functions?
+
+
+------------------------------------------------------------------------
+
+#### 📫 Help needed?
+Please let us know if you need help with PRIMCAT-CRC.
+<img src="primcat_collab.png" align="center"/>
+
