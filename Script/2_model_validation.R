@@ -1,25 +1,46 @@
-# This script perform the verification of the model by comparing the simulation model input parameters with the 
-# simulated events, outcomes and resource use. 
+#-----------------------------------------------------------------------------------------#
+# The DES model was subjected to a validation process whereby the input parameters were   #
+# compared against the outcomes, events, and resource usage of the simulation.            #
+#                                                                                         #
+# The correctness of the implementation of time-dependent parameters and                  #
+# new treatment parameters was also verified, with separate verification conducted        #
+# for each disease stage.                                                                 #
+#                                                                                         #
+# To confirm the accuracy of the simulation scenario, the new treatment was not used      #
+# in the first year, followed by some use in the second year, and subsequently being the  #
+# sole treatment used from the third year onward.                                         #
+#                                                                                         #
+# The verification process was conducted to ensure that the new treatment was             #
+# correctly implemented and aligned with the intended simulation scenario.                #
+#-----------------------------------------------------------------------------------------#
 #
-# Note that this script has been defined in line with the PRIMCAT-CRC model structure as described in version
-# 0.05 of the conceptual model structure, which is available from the CHSR network drive.
+#
+# This script perform the verification of the model by comparing the simulation model 
+# input parameters with the simulated events, outcomes and resource use. 
+#
+# The PRIMCAT-CRC model structure is described in the manuscript and available 
+# as supplementary material at the following link: https://doi.org/10.1016/j.jval.2024.06.006
 #
 # Version history:
 # - November 2021   Koen Degeling       R v4.0.3    Initial version
 # - February 2022   Fanny Franchini     R v4.0.5    Code review, Rerun verification with updated R
-
-
+# - June 2024       Fanny Franchini     R v4.3.1    Rerun on new R, revamped for GitHub repository
+#
+#
+#-----------------------------------------------------------------------------------------#
+#
+#
 ## 1. INITIALIZATION ----
 
 # Clearing the global environment and console
-rm(list = ls()); gc(); cat('\14');
+rm(list = ls()); gc();
 
 # Libraries
 library(flexsurv)   # v2.0
 library(ggplot2)    # v3.3.3
 
-# Load the PRIMCAT CRC model
-source(file = 'Scripts/2_functions.R')
+# Load the PRIMCAT-CRC model
+source(file = 'Script/1_PRIMCAT_CRC_functions.R')
 
 # Path to the plots that were exported as part of the data analysis
 path_plots <- '../../WP1_treatment_patterns/PRIMCAT_CRC/plots/'
@@ -638,7 +659,7 @@ resources_RASwt_L1 <- resources_RASwt[!is.na(events_RASwt$RASwt_L1), ]
 # Treatment utilization
 pars0$p_RASwt_L1_chemo
 mean(!is.na(resources_RASwt_L1$RASwt_L1_chemo))
-            
+
 pars0$p_RASwt_L1_EGFR
 mean(!is.na(resources_RASwt_L1$RASwt_L1_EGFR))
 
@@ -1535,7 +1556,7 @@ pars_RASmtL1_NEW <- PRIMCAT_CRC_Parameters(starttime = 0, updates = list(
     p_RASmt_L1_chemo     = 0,
     p_RASmt_L1_chemoVEGF = 0,
     p_RASmt_L1_NEW       = 1
-)
+  )
 ))
 
 sim_RASmtL1_NEW <- PRIMCAT_CRC_Simulation(start = start_RASmtL1_NEW, pars = pars_RASmtL1_NEW)
