@@ -32,7 +32,8 @@ uncertainty for policymakers in decisions to publicly reimburse new treatments.
 │  ├─ 1_PRIMCAT_CRC_function.R         # R script defining the PRIMCAT-CRC model
 │  ├─ 2_model_validation.R             # R script used for model validation
 │  ├─ 3_base_case.R                    # Base case scenario analysis
-│  └─ 4_scenario_pembro.R              # Scenario analysis for Pembrolizumab introduction
+│  ├─ 4_scenario_pembro.R              # Scenario analysis for Pembrolizumab introduction
+│  └─ 5_manuscript.R                   # Code used to produce manuscript tables and figures
 │
 ├─ PRIMCAT-logo-small.jpg
 ├─ primcat_collab.png
